@@ -452,6 +452,7 @@ def _provider_key_env(provider: str | None) -> str | None:
         "iflytek": "SPARK_API_KEY",
         "zai": "ZAI_API_KEY",
         "modelscope": "MODELSCOPE_API_KEY",
+        "llmtr": "LLMTR_API_KEY",
     }.get((provider or "").lower())
 
 
@@ -478,6 +479,7 @@ def _provider_base_env(provider: str | None) -> str | None:
         "zai": "ZAI_BASE_URL",
         "modelscope": "MODELSCOPE_BASE_URL",
         "ollama": "OLLAMA_BASE_URL",
+        "llmtr": "LLMTR_BASE_URL",
     }.get((provider or "").lower())
 
 
@@ -5965,6 +5967,16 @@ _PROVIDER_CHOICES: list[dict[str, str | None]] = [
         "model": "deepseek-v4.1-flash",
         "key_prefix": "sk-",
         "key_placeholder": "sk-...",
+    },
+    {
+        "label": "LLMTR",
+        "provider": "llmtr",
+        "key_env": "LLMTR_API_KEY",
+        "base_env": "LLMTR_BASE_URL",
+        "base_url": "https://llmtr.com/v1",
+        "model": "qwen/qwen3.8-27b-free",
+        "key_prefix": "llmtr-",
+        "key_placeholder": "llmtr-...",
     },
     {
         "label": "SiliconFlow (CN)",

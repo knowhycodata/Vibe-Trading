@@ -17,6 +17,7 @@ EXPECTED_PROVIDER_DEFAULTS = {
     "openrouter": "deepseek/deepseek-v4-pro",
     "opencode": "deepseek-v4.1-flash",
     "kimi-coding": "kimi-for-coding",
+    "llmtr": "qwen/qwen3.8-27b-free",
     "ollama": "qwen2.5:32b",
     "copilot": "claude-sonnet-5",
     "claude-cli": "claude-opus-5-5",

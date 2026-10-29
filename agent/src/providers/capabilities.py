@@ -281,6 +281,11 @@ _PROVIDERS: dict[str, ProviderCapabilities] = {
     "opencode": _OPENCODE_CAPABILITIES,
     "opencode-zen": ProviderCapabilities("opencode-zen", "OPENAI_API_KEY", "OPENAI_BASE_URL"),
     "opencode-go": ProviderCapabilities("opencode-go", "OPENAI_API_KEY", "OPENAI_BASE_URL"),
+    # LLMTR (llmtr.com) is an OpenAI-compatible gateway. Published model ids
+    # such as ``llmtr/...`` are sent unchanged — the prefix is part of the id,
+    # not a route to strip. The chat path does not accept a ``reasoning``
+    # object, so no capability flags are set and it rides the generic path.
+    "llmtr": ProviderCapabilities("llmtr", "LLMTR_API_KEY", "LLMTR_BASE_URL"),
 }
 
 
